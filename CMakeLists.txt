@@ -10,6 +10,7 @@ message("link cpu: " ${LINK_ESP_TASK_CORE_ID})
 
 
 target_compile_definitions(${COMPONENT_LIB} INTERFACE LINK_ESP_TASK_CORE_ID=${LINK_ESP_TASK_CORE_ID})
+target_compile_options(${COMPONENT_LIB} INTERFACE "-fno-permissive")
 
 include(link/AbletonLinkConfig.cmake)
 target_precompile_headers(${COMPONENT_LIB} INTERFACE ${link_HEADERS})
